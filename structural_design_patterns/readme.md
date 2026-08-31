@@ -199,6 +199,17 @@ class SMSNotificationDecorator implements Notification {
 }
 ```
 
+#### Usage Example:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Notification notification = new SMSNotificationDecorator(new EmailNotification());
+        notification.send("Hello!");  // Sends both email and SMS
+    }
+}
+```
+
 ```java
 package org.example.structural.service;
 
@@ -241,17 +252,6 @@ class MultipleNotificationDecorator implements Notification {
 public class Main {
     public static void main(String[] args) {
         Notification notification = new MultipleNotificationDecorator(new EmailNotification(), new SMSNotification());
-        notification.send("Hello!");  // Sends both email and SMS
-    }
-}
-```
-
-#### Usage Example:
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        Notification notification = new SMSNotificationDecorator(new EmailNotification());
         notification.send("Hello!");  // Sends both email and SMS
     }
 }

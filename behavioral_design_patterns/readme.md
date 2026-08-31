@@ -59,6 +59,8 @@ public class Main {
 }
 ```
 
+[Example](https://refactoring.guru/design-patterns/chain-of-responsibility/java/example)
+
 ### Practical Considerations:
 - **Flexibility**: Handlers are modular and can be added or removed without changing the overall chain structure.
 - **Performance**: Long chains can introduce performance overhead, so limit their length.
